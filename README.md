@@ -1,2 +1,2 @@
 # React-Dashboard-Movies
-Practica React + bootstrap Dashboard Digital House
+Practica React + Bootstrap Dashboard Digital House

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 
 function SmallCard(props) {
@@ -23,5 +24,22 @@ function SmallCard(props) {
         </React.Fragment>
     );
 }
+SmallCard.propTypes = {
+    title: PropTypes.string.isRequired,
+    color: PropTypes.string.isRequired,
+    quantity: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]).isRequired,
+    icon:PropTypes.string.isRequired
 
+}
+SmallCard.defaultProps={
+    
+        title:'Sin Titulo',
+        quantity: "Sin Cantidad",
+        icon: "fa-clipboard-list",
+        color: "success"
+    
+}
 export default SmallCard;

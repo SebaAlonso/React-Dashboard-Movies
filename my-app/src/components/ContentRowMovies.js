@@ -1,54 +1,42 @@
-
 import React from 'react';
 import SmallCard from './SmallCard';
 
-let cardProps =[
-    {
-        title:'Movies in Data Base',
-        quantity:"21",
-        icon:"fa-film",
-        color:"primary"
-    },
-    {
-        title:' Total awards',
-        quantity:"79",
-        icon:"fa-award",
-        color:"success"
-    },
-    {
-        title:'Actors quantity',
-        quantity:"49",
-        icon:"fa-user",
-        color:"warning"
-    }
-]
-
-
-function ContentRowMovies() {
-    return (
-        <React.Fragment>
-            {/*<!-- Content Row Movies-->*/}
-            <div className="row">
-
-                {/*<!-- Movies in Data Base -->*/}
-                    
-                {cardProps.map((item, i) => {
-                    return <SmallCard key={i} {...item}  />
-                })}
-
-
-            </div>
-            {/*<!-- End movies in Data Base -->*/}
-
-        </React.Fragment>
-    );
+let productInDataBase = {
+    color:   "primary",
+    titulo: "Movies in Data Base",
+    valor: 21,
+    icono: "fas fa-film",
 }
 
-export default ContentRowMovies;
+let amount ={
+    color:   "success",
+    titulo: "Total awards",
+    valor: 79,
+    icono: "fas fa-award",
+}
+
+let user = {
+    color:   "warning",
+    titulo: "Actors quantity",
+    valor: 49,
+    icono: "fas fa-user",
+}
+
+let cardProps = [productInDataBase,amount,user];
 
 
-
-
-
-
-
+function ContentRowTop(){
+    return (
+        <React.Fragment>
+        {/*<!-- Content Row -->*/}
+        <div className="row">
+            {
+                cardProps.map((producto,index)=>{
+                    return <SmallCard  {...producto}  key= {index}/>
+                })
+            }      
+        </div>
+        </React.Fragment>
+    )
+}
+export default ContentRowTop;

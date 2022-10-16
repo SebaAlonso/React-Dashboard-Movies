@@ -1,33 +1,22 @@
-import React from "react";
-import Topbar from "./TopBar";
-import Footer from "./Footer";
-import ContentRowTop from "./ContentRowTop";
-import ContentRowMovies from "./ContentRowMovies";
-
-
-function ContentWrapper() {
+import React from 'react';
+import TopBar from './TopBar';
+import ContentRowTop from './ContentRowTop';
+import Movie from './Movie';
+import Footer from './Footer';
+function ContentWrapper(){
     return (
         <React.Fragment>
             {/*<!-- Content Wrapper -->*/}
             <div id="content-wrapper" className="d-flex flex-column">
-
                 {/*<!-- Main Content -->*/}
                 <div id="content">
-                    <Topbar/>
-                    <ContentRowMovies/>
-
-                    <ContentRowTop/>
+                    <TopBar />
+                    <ContentRowTop />
+                    <Movie />
+                    <Footer />
                 </div>
-                {/*<!-- End of MainContent -->*/}
-
-            <Footer/>
-
-            </div>
-            {/*<!-- End of Content Wrapper -->*/}
+            </div>    
         </React.Fragment>
     )
 }
-
-
-
 export default ContentWrapper;

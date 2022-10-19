@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MovieList from './MovieList';
+// import MovieList from './MovieList';
 
 function Movie(){
     return(
@@ -22,7 +22,7 @@ function Movie(){
                                             <th>Duración</th>
 										</tr>
 									</thead>
-									<tfoot>
+									{/* <tfoot>
 										<tr>
                                             <th>Id</th>
                                             <th>Titulo</th>
@@ -30,7 +30,7 @@ function Movie(){
                                             <th>Premios</th>
                                             <th>Duración</th>
 										</tr>
-									</tfoot>
+									</tfoot> */}
 									<tbody>
 										<tr>
 											<td>01</td>

@@ -6,6 +6,7 @@ import ContentRowMovies from './ContentRowMovies'
 import GenresInDb from './GenresInDb';
 import ContentWrapper from './ContentWrapper';
 import NotFound from './NotFound';
+import SearchMovies from './SearchMovies';
 function SideBar() {
     return (
         <React.Fragment>
@@ -59,6 +60,12 @@ function SideBar() {
                         <span>Tables</span>
                     </Link>
                 </li>
+                <li className="nav-item">
+                    <Link className="nav-link" to="/SearchMovies">
+                        <i className="fas fa-search"></i>
+                        <span>Search Movie</span>
+                    </Link>
+                </li>
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block" />
@@ -78,6 +85,9 @@ function SideBar() {
                 </Route>
                 <Route exact path='/ContentRowMovies'>
                     <ContentRowMovies />
+                </Route>
+                <Route exact path='/SearchMovies'>
+                    <SearchMovies />
                 </Route>
                 <Route component={NotFound}></Route>
 
